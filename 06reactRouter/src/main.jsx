@@ -5,7 +5,7 @@ import './index.css'
 import { createBrowserRouter, createRoutesFromElements, RouterProvider,Route } from 'react-router-dom'
 import Layout from './Layout.jsx'
 import { About, Contact, Github, Home,User,githubInfoLoader } from './components/index.js'
-
+import Error from './components/Error/Error.jsx'
 
 //1st Method to create router
 // const router = createBrowserRouter([
@@ -36,7 +36,7 @@ import { About, Contact, Github, Home,User,githubInfoLoader } from './components
 //2nd Method to create a router
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={<Layout/>}>
+    <Route path='/' element={<Layout/>} errorElement={<Error/>}>
       <Route
       path='' element={<Home />}
       />
